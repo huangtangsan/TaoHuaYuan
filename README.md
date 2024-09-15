@@ -1,6 +1,9 @@
 # vue-project
 
-This template should help get you started developing with Vue 3 in Vite.
+本网站基于开源代码改写。
+加入了自己的一些设计。
+感谢@ViggoZ和@Anjaxs
+
 
 ## Recommended IDE Setup
 
