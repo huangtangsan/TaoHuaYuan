@@ -12,7 +12,7 @@
             },
             {
                 "url": "https://csdiy.wiki/",
-                "logo": "assets/images/logos/csdiy.png",
+                "logo": "assets/images/logos/caihua.png",
                 "title": "CS自学指南",
                 "desc": "北大计科前辈的成长之路,人人都能自学成才"
             },
@@ -24,7 +24,7 @@
             },
             {
                 "url": "https://web.hujiangtao.cn/",
-                "logo": "assets/images/logos/zcool.png",
+                "logo": "assets/images/logos/cxy.jpg",
                 "title": "程序员导航",
                 "desc": "同类型的网站"
             },
@@ -34,17 +34,24 @@
                 "title": "Youtube",
                 "desc": "全球最大的学习分享平台"
             },
-            {
-                "url": "https://www.google.com",
-                "logo": "assets/images/logos/google.png",
-                "title": "Google",
-                "desc": "全球最大的UI学习分享平台"
-            },
+
             {
                 "url": "https://devv.ai/zh",
                 "logo": "assets/images/logos/devv.png",
                 "title": "devv.ai",
                 "desc": "最懂程序员的新一代 AI 搜索引擎"
+            },
+            {
+                "url": "http://47.245.53.14:8097/#/",
+                "logo": "assets/images/logos/Medialoot.png",
+                "title": "halo-blog",
+                "desc": "huangtang博客"
+            },
+            {
+                "url": "http://47.245.53.14:3000/#/",
+                "logo": "assets/images/logos/suisuinian.jpg",
+                "title": "碎碎念",
+                "desc": "分享俺的碎碎念"
             }
         ]
     },
@@ -67,7 +74,7 @@
             }, 
             {
                 "url": "https://lzw.me/x/chatgpt-sites/",
-                "logo": "assets/images/logos/AiMarks.png",
+                "logo": "assets/images/logos/Illustrator.png",
                 "title": "AI大全",
                 "desc": "收集了很多AI网站"
             }, 
@@ -110,38 +117,83 @@
         "icon": "linecons-lightbulb",
         "children": [
             {
-                "name": "代码甜点",
+                "name": "你瞅啥",
                 "en_name": "WEB Inspiration",
                 "is_hot": true,
                 "web": [
                     {
-                        "url": "http://www.freedyy.com/",
-                        "logo": "assets/images/logos/producthunt.png",
-                        "title": "烟花模拟器",
-                        "desc": "发现新鲜有趣的产品"
+                        "url": "https://www.google.com",
+                        "logo": "assets/images/logos/google.png",
+                        "title": "Google",
+                        "desc": "全球最大的学习分享平台"
                     },
                     {
-                        "url": "http://175.24.152.246:9999/?#/send",
-                        "logo": "assets/images/logos/huangtang.png",
+                        "url": "http://47.245.53.14:20157/#/",
+                        "logo": "assets/images/logos/uikitme.png",
                         "title": "文件传输柜",
                         "desc": "在线文件分享"
                     },
                     {
-                        "url": "http://175.24.152.246:3000/#/soutu",
+                        "url": "http://47.245.53.14:3000/#/soutu",
+                        "logo": "assets/images/logos/Iconfinder.png",
                         "title": "搜图工具",
                         "desc": "以图搜图"
                     },
                     {
-                        "url": "http://175.24.152.246:3000/#/bios",
+                        "url": "http://47.245.53.14:3000/#/bios",
+                        "logo": "assets/images/logos/InstantLogoSearch.png",                        
                         "title": "BIOS快捷键",
                         "desc": "快速查找BIOS快捷建"
+                        
                     },
                     {
                         "url": "http://www.iconfont.cn",
-                        "logo": "assets/images/logos/iconfont.png",
+                        "logo": "assets/images/logos/ali.jpg",
                         "title": "iconfont",
                         "desc": "阿里巴巴矢量图标库"
-                    }   
+                    },
+                    {
+                        "url": "https://www.iyf.tv/",
+                        "logo": "assets/images/logos/youtube.png",
+                        "title": "iyf.tv",
+                        "desc": "爱壹帆-海量高清视频免费在线观看"
+                    },
+                    {
+                        "url": "https://www.ncat22.com/",
+                        "logo": "assets/images/logos/youtube.png",
+                        "title": "ncat22.com",
+                        "desc": "网飞猫-一起看更好的世界"
+                    },
+                    {
+                        "url": "https://fitcome.com/",
+                        "logo": "assets/images/logos/bilibili.jpg",
+                        "title": "bilibili",
+                        "desc": "哔哩哔哩-傻逼二次元-抽象艺术家"
+                    },
+                    {
+                        "url": "https://xksaturn.com/netdisk/cn",
+                        "logo": "assets/images/logos/youtube.png",
+                        "title": "黄师傅影视剧",
+                        "desc": "免费网盘下载和在线观看"
+                    },
+                    {
+                        "url": "https://xmovie.apppss.com/",
+                        "logo": "assets/images/logos/youtube.png",
+                        "title": "xmovie看剧网",
+                        "desc": "祝您观影愉快"
+                    },
+                    {
+                        "url": "https://www.heimaotv.vip/",
+                        "logo": "assets/images/logos/youtube.png",
+                        "title": "一起追剧",
+                        "desc": "全蓝光画质永久免费观看"
+                    },
+                    {
+                        "url": "https://fitcome.com/",
+                        "logo": "assets/images/logos/youtube.png",
+                        "title": "金牌影视",
+                        "desc": "首发枪版"
+                    }
                 ]
             }
         ]
@@ -156,24 +208,14 @@
                 "en_name": "Icon",
                 "web": [
                     {
-                        "url": "http://baota.huangtang.link:8899/fa3cd077",
-                        "title": "宝塔-阿里",
-                        "desc": "黄糖的宝塔"
+                        "url": "http://47.245.53.14:11233/9c07ef5c93",
+                        "title": "vps-claw-1panel",
+                        "desc": "1panel"
                     },
                     {
-                        "url": "https://swas.console.aliyun.com/",
-                        "title": "阿里云",
-                        "desc": "轻量级服务器管理"
-                    },
-                    {
-                        "url": "http://175.24.152.246:8888/e8a72bd4",
-                        "title": "宝塔-企鹅",
-                        "desc": "鹅城"
-                    },
-                    {
-                        "url": " https://console.cloud.tencent.com/lighthouse/instance/detail?rid=4&id=lhins-3mwz7j9q",
-                        "title": "鹅城",
-                        "desc": "上任！"
+                        "url": "http://47.117.176.213:8899/1eb64ffcb4",
+                        "title": "阿里云-1panel",
+                        "desc": "ECS服务器管理"
                     },
                     {
                         "url": "https://developer.aliyun.com/mirror/",
@@ -186,11 +228,27 @@
                         "desc": "不限速!"
                     },
                     {
-                        "url": "http://huangtang.link/wangpan",
+                        "url": "http://47.245.53.14:5244/",
                         "title": "alist网盘",
                         "desc": "alist网盘"
+                    },
+                    {
+                        "url": "http://deepyourmind.xyz",
+                        "title": "deepyourmind",
+                        "desc": "deepyourmind"
+                    },
+                    {
+                        "url": "http://2570527.xyz",
+                        "title": "爱吃菠菜",
+                        "desc": "吃菜"
+                    },
+                    {
+                        "url": "http://47.245.53.14:8097/archives/ri-ben-yu-mian-qiang",
+                        "title": "日语学习精选",
+                        "desc": "好好学日本语吧>+<俺类乖乖"
                     }
-               
+                    
+                    
                 ]
             }
         ]
