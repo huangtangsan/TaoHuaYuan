@@ -4,7 +4,7 @@
       <!-- 版权信息 -->
       <div class="footer-text">
         &copy; 2018-2025
-        <a href="#"><strong>huangtang桃花源</strong></a> 
+        <a href="/"><strong>huangtang桃花源</strong></a>
         design by <a href="http://huangtang.link" target="_blank"><strong>huangtang</strong></a>
       </div>
       

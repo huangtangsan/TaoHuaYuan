@@ -57,7 +57,7 @@
                 </div>
                   <div class="col-sm-4">
                     <div class="xe-widget xe-conversations box2 label-info"
-                         onclick="window.open('http://go.huangtang.link/', '_blank')"
+                         onclick="window.open('https://url.huangtang.link/admin/index.php', '_blank')"
                          data-toggle="tooltip"
                          data-placement="bottom"
                          title=""
