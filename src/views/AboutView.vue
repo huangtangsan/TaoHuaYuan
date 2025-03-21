@@ -9,8 +9,8 @@
           </router-link>
         </div>
         <div class="navbar-mobile-clear"></div>
-        <a href="https://github.com/Anjaxs/WebStack-vue" target="_blank">
-           <h2>本站基于WebStack-vue构建，使用Vue3和TS重写。</h2>
+        <a href="https://github.com/Anjaxs/WebStack-vue" target="_blank" style="display: block; width: 100%;">
+           <h2 style="text-align: center;">本站基于WebStack-vue构建,使用TS重写,基于VUE3。</h2>
         </a>
       </div>
     </nav>
