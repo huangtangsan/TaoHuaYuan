@@ -16,7 +16,7 @@ const app = createApp(App)
 
 app.use(router)
 app.use(VueSmoothScroll, {
-    duration: 0, // 滚动持续时间，单位为毫秒
+    duration: 500, // 滚动持续时间，单位为毫秒
     offset: -20,   // 滚动偏移量，单位为像素
     easing: 'easeInOutCubic' // 滚动动画效果
   });
