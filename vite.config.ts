@@ -14,6 +14,8 @@ export default defineConfig({
     }
   },
   server: {
+    // 允许通过指定域名访问
+    allowedHosts: ['code.huangtangyun.heiyu.space'],
     proxy: {
       '/api': {
         target: 'https://v2.jinrishici.com',
