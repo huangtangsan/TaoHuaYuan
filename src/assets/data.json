@@ -8,7 +8,7 @@
                 "url": "https://www.matongxue.com/",
                 "logo": "assets/images/logos/matongxue.jpeg",
                 "title": "数学马同学",
-                "desc": "换个方式学数学,愿天下没有难学的数学"
+                "desc": "换个方式学数学,愿天下没有难学的数学！"
             },
             {
                 "url": "https://csdiy.wiki/",
@@ -34,12 +34,11 @@
                 "title": "Youtube",
                 "desc": "全球最大的学习分享平台"
             },
-
             {
-                "url": "https://devv.ai/zh",
-                "logo": "assets/images/logos/devv.png",
-                "title": "devv.ai",
-                "desc": "最懂程序员的新一代 AI 搜索引擎"
+                "url": "https://bilibili.com/",
+                "logo": "assets/images/logos/bilibili.jpg",
+                "title": "bilibili",
+                "desc": "哔哩哔哩-傻逼二次元-抽象艺术家"
             },
             {
                 "url": "http://47.245.53.14:8097/#/",
@@ -71,19 +70,19 @@
                 "logo": "assets/images/logos/topNews.png",
                 "title": "今日热榜",
                 "desc": "各大平台热门新闻全搜罗"
-            }, 
+            },
             {
                 "url": "https://lzw.me/x/chatgpt-sites/",
                 "logo": "assets/images/logos/Illustrator.png",
                 "title": "AI大全",
                 "desc": "收集了很多AI网站"
-            }, 
+            },
             {
                 "url": "https://www.freedidi.com/",
                 "logo": "assets/images/logos/lingdu.png",
                 "title": "零度导航",
                 "desc": "IT奇淫技巧"
-            }, 
+            },
             {
                 "url": "https://www.ahhhhfs.com/",
                 "logo": "assets/images/logos/Ajie.webp",
@@ -108,9 +107,8 @@
                 "title": "水帘洞",
                 "desc": "通过水帘洞天我们可以看到优质的网站来自哪些大神推荐"
             }
-            
         ]
-    }, 
+    },
     {
         "name": "开发资源",
         "en_name": "Inspiration",
@@ -141,16 +139,21 @@
                     },
                     {
                         "url": "http://47.245.53.14:3000/#/bios",
-                        "logo": "assets/images/logos/InstantLogoSearch.png",                        
+                        "logo": "assets/images/logos/InstantLogoSearch.png",
                         "title": "BIOS快捷键",
                         "desc": "快速查找BIOS快捷建"
-                        
                     },
                     {
                         "url": "http://www.iconfont.cn",
                         "logo": "assets/images/logos/ali.jpg",
                         "title": "iconfont",
                         "desc": "阿里巴巴矢量图标库"
+                    },
+                    {
+                        "url": "https://devv.ai/zh",
+                        "logo": "assets/images/logos/devv.png",
+                        "title": "devv.ai",
+                        "desc": "最懂程序员的新一代 AI 搜索引擎"
                     },
                     {
                         "url": "https://www.iyf.tv/",
@@ -163,12 +166,6 @@
                         "logo": "assets/images/logos/youtube.png",
                         "title": "ncat22.com",
                         "desc": "网飞猫-一起看更好的世界"
-                    },
-                    {
-                        "url": "https://bilibili.com/",
-                        "logo": "assets/images/logos/bilibili.jpg",
-                        "title": "bilibili",
-                        "desc": "哔哩哔哩-傻逼二次元-抽象艺术家"
                     },
                     {
                         "url": "https://xksaturn.com/netdisk/cn",
@@ -247,8 +244,6 @@
                         "title": "日语学习精选",
                         "desc": "好好学日本语吧>+<俺类乖乖"
                     }
-                    
-                    
                 ]
             }
         ]
