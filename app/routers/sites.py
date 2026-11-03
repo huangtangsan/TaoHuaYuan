@@ -229,9 +229,14 @@ def sync_site(site_id: int, db: Session = Depends(get_db)) -> dict:
     except Exception as exc:
         raise ApiError(500, 500, f"同步失败：{exc}") from exc
 
+    # 同步只用来「补全」，绝不覆盖用户手动填过的内容。
+    # 否则一个没有 meta description / favicon 的站点（例如 GitHub Pages 上的
+    # 纯文档页），一次同步就会把管理员手工写的描述和上传的图标清成空。
     site.title = result.title[:50] or site.title
-    site.description = result.description[:500]
-    site.icon = result.icon
+    if not site.description:
+        site.description = result.description[:500]
+    if not site.icon or site.icon == DEFAULT_SITE_ICON:
+        site.icon = result.icon
     db.add(site)
     db.commit()
     return {"id": site.id, "icon_source": result.icon_source}
