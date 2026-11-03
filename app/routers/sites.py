@@ -138,6 +138,16 @@ async def create_sites(request: Request, db: Session = Depends(get_db)) -> dict:
                 except Exception as exc:  # network and parsing failures are data, not crashes
                     errors[url] = str(exc)
 
+    # 新站点默认排到同类末尾：取该分类下当前最大 sort + 1。
+    # 未选分类时（category_id=0），取全部站点的最大 sort + 1。
+    if category_id:
+        base_sort = (
+            db.scalar(select(func.max(Site.sort)).where(Site.category_id == category_id))
+            or 0
+        )
+    else:
+        base_sort = db.scalar(select(func.max(Site.sort))) or 0
+
     success_count = 0
     icon_sources: dict[str, str] = {}
     for url in valid:
@@ -153,6 +163,7 @@ async def create_sites(request: Request, db: Session = Depends(get_db)) -> dict:
         else:
             title, description, icon = url, "", DEFAULT_SITE_ICON
             icon_sources[url] = "default"
+        base_sort += 1
         db.add(
             Site(
                 category_id=category_id,
@@ -161,7 +172,7 @@ async def create_sites(request: Request, db: Session = Depends(get_db)) -> dict:
                 description=description[:500],
                 url=url,
                 is_used=is_used,
-                sort=0,
+                sort=base_sort,
             )
         )
         success_count += 1

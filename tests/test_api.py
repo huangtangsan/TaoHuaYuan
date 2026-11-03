@@ -130,7 +130,7 @@ def test_site_create_update_public_and_export(
     listed = client.get(
         "/api/admin/site",
         headers=auth_headers,
-        params={"page": 1, "page_size": 5, "category_id": root["id"]},
+        params={"page": 1, "page_size": 100, "category_id": root["id"]},
     )
     assert listed.status_code == 200
     rows = listed.json()["list"]
