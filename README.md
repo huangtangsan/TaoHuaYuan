@@ -159,16 +159,6 @@ python -m pytest -q
 | `WEBSTACK_ICON_FALLBACK` | DuckDuckGo | 图标镜像模板 |
 | `WEBSTACK_ICON_LETTER` | `1` | 无图标时是否生成首字母占位图 |
 
-## 与 Go 版的有意差异
-
-- 不再每次启动都 drop 并重建表，后台修改可持久化。
-- 登录 Cookie 改为 HttpOnly，不再由 JS 写入 Token。
-- 删除分类时检查子分类与网站，避免孤儿数据。
-- 批量新增时非法 URL、重复 URL、抓取失败会明确计入失败列表。
-- 网站 Logo 等比缩放居中到 64×64，避免强制拉伸。
-- 图标抓取多级兜底并做有效性校验。
-- 新增 `/api/home`，让首页一次拿到配置、分类与启用站点。
-
 ## License
 
 [MIT](LICENSE) © 2026 SKJ-Huangtang
