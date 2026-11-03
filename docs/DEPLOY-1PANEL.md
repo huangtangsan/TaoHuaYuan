@@ -410,7 +410,6 @@ docker exec 1Panel-openresty-AbCd openresty -s reload
 - [ ] **SSH**：密钥登录、关掉 root 密码登录（`/etc/ssh/sshd_config` 里 `PasswordAuthentication no`），改默认 22 端口可选。
 - [ ] **防火墙只开必要端口**：80、443、面板端口、SSH（最好限制来源）。
 - [ ] **站点文案**：后台「网站配置」里的标题/关键词/描述、关于页还带「桃花源」初始文案，按需改。
-- [ ] **内网链接**：数据里 `VoHive → http://192.168.1.22:3001/login` 是内网地址，公网打不开，建议后台禁用。
 - [ ] **备份已跑通**：见第 9 节，先手动执行一次确认产物存在。
 - [ ] **HTTPS 强制跳转 + HSTS** 已开。
 

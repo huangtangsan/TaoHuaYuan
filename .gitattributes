@@ -1,0 +1,17 @@
+# 语言统计：让 Python 成为仓库主导语言。
+# 下面的数据文件与内联 base64 资源不计入 linguist 统计，
+# 它们本质是运行时数据 / 第三方打包产物，不是手写代码。
+
+# 内置示例数据（含 base64 图标），视为生成数据
+app/services/seed_sites.json linguist-generated=true
+
+# 前端依赖锁文件
+frontend/package-lock.json linguist-generated=true
+
+# 内联 base64 字体/图标的样式与字体二进制
+frontend/public/assets/fonts/** linguist-vendored=true
+frontend/public/assets/images/** linguist-vendored=true
+frontend/public/favicon.png linguist-vendored=true
+
+# 文档不算代码语言
+*.md linguist-documentation=true
