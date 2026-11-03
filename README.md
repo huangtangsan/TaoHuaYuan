@@ -1,6 +1,6 @@
 # 桃花源 · 网址导航（TaoHuaYuan）
 
-一个自部署的网址导航站，前端沿用 `TaoHuaYuan` 的侧栏、卡片与关于页视觉，后端由 **Go + Gin + GORM 重写为 FastAPI + SQLAlchemy + SQLite**，管理后台的页面与接口契约保持兼容。
+一个自部署的网址导航站，前端沿用 `TaoHuaYuan` 的侧栏、卡片与关于页视觉，后端 **FastAPI + SQLAlchemy + SQLite**，管理后台的页面与接口契约保持兼容。
 
 - 🎯 **公共导航**：分类侧栏、分组卡片、本地搜索、移动端抽屉
 - 📝 **关于页**：Markdown 渲染 + DOMPurify 消毒
