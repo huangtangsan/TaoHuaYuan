@@ -175,4 +175,7 @@ python -m pytest -q
 
 ## 致谢
 
-本项目基于开源导航站改写，感谢 [@ViggoZ](https://github.com/ViggoZ) 与 [@Anjaxs](https://github.com/Anjaxs) 的 WebStack 生态。
+本项目基于以下开源项目改写，特此致谢：
+
+- 前端视觉与导航站生态：[@ViggoZ](https://github.com/ViggoZ) 与 [@Anjaxs](https://github.com/Anjaxs) 的 WebStack 生态
+- 后台管理端：[@ch3nnn](https://github.com/ch3nnn/webstack-go) 的 [webstack-go](https://github.com/ch3nnn/webstack-go)，本项目的管理后台基于其 Go 版实现改写成 Python
