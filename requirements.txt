@@ -1,0 +1,15 @@
+# 已验证：Python 3.13.14 与 3.14.7（Windows x64），均使用预编译 wheel。
+# 注意：这里的版本号不能随便降级。旧组合（Pillow 11.3 / psutil 7.0）在 Python 3.14 下
+# 没有 cp314 wheel，装进去的是 cp313 二进制，导入时报
+# ImportError: cannot import name 'ArgsKwargs' from 'pydantic_core._pydantic_core'
+fastapi==0.116.1
+uvicorn[standard]==0.38.0
+SQLAlchemy==2.0.55
+PyJWT==2.10.1
+python-multipart==0.0.20
+httpx==0.28.1
+beautifulsoup4==4.13.4
+Pillow==12.3.0
+openpyxl==3.1.5
+psutil==7.2.2
+pytest==8.4.1

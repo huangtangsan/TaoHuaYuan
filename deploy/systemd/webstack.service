@@ -1,0 +1,39 @@
+[Unit]
+# 备选方案：不用 Docker，直接用宿主机 Python 跑。
+# 安装：
+#   useradd -r -s /usr/sbin/nologin -d /opt/webstack webstack
+#   chown -R webstack:webstack /opt/webstack
+#   cp deploy/systemd/webstack.service /etc/systemd/system/
+#   systemctl daemon-reload && systemctl enable --now webstack
+Description=WebStack Python (FastAPI + Vue)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=webstack
+Group=webstack
+WorkingDirectory=/opt/webstack
+EnvironmentFile=/opt/webstack/.env
+
+# 1Panel 的 OpenResty 在容器里，宿主机进程要监听 0.0.0.0（或 docker0 网关地址），
+# 只监听 127.0.0.1 时容器反向代理会 502。公网直连由防火墙拦住，见部署手册。
+ExecStart=/opt/webstack/.venv/bin/uvicorn app.main:app \
+    --host 0.0.0.0 --port 8300 \
+    --proxy-headers --forwarded-allow-ips "*" \
+    --no-server-header
+
+Restart=always
+RestartSec=3
+TimeoutStopSec=15
+
+# 最小权限
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/webstack/data
+UMask=0027
+
+[Install]
+WantedBy=multi-user.target

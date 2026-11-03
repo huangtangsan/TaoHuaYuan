@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Placeholder icon for sites that do not expose a usable favicon. -->
+  <rect width="64" height="64" rx="14" fill="#eef3fb"/>
+  <circle cx="32" cy="32" r="17" fill="none" stroke="#7b9ccc" stroke-width="3"/>
+  <path d="M15 32h34M32 15c7 8 7 26 0 34M32 15c-7 8-7 26 0 34" fill="none" stroke="#7b9ccc" stroke-width="2.5"/>
+</svg>

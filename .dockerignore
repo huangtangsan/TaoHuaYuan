@@ -1,0 +1,15 @@
+# 构建上下文瘦身：镜像只装依赖，代码/数据/产物都靠挂载
+.venv/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.idea/
+tests/
+docs/
+data/
+frontend/node_modules/
+frontend/dist/
+*.log
+.env
+.git/
+.gitignore

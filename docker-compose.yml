@@ -1,0 +1,66 @@
+# WebStack（FastAPI + Vue）单服务编排
+#
+# 这套 compose 的用法：镜像只负责 Python 运行时和依赖，代码 / 前端产物 / 数据库
+# 都通过挂载进容器。所以日常更新只要替换文件 + 重启，不必每次重建镜像；
+# 只有 requirements.txt 变了才需要 `docker compose build`。
+#
+# 启动：cd /opt/webstack && docker compose up -d --build
+# 日志：docker compose logs -f --tail=100 webstack
+
+name: webstack
+
+services:
+  webstack:
+    build:
+      context: .
+      dockerfile: deploy/Dockerfile
+      args:
+        # 基础镜像走加速地址（docker.nju.edu.cn 等公共站已对匿名请求返回 403）；
+        # 海外服务器可在 .env 里设为 python:3.12-slim
+        BASE_IMAGE: ${BASE_IMAGE:-docker.m.daocloud.io/library/python:3.12-slim}
+        # apt / pip 走国内源；海外服务器可改为 deb.debian.org / pypi.org
+        APT_MIRROR: ${APT_MIRROR:-mirrors.aliyun.com}
+        PIP_INDEX_URL: ${PIP_INDEX_URL:-https://mirrors.aliyun.com/pypi/simple/}
+    image: webstack-python:1.0.0
+    container_name: webstack
+    restart: unless-stopped
+
+    env_file:
+      - .env
+    environment:
+      TZ: Asia/Shanghai
+      WEBSTACK_DATA_DIR: /app/data
+      WEBSTACK_FRONTEND_DIST: /app/frontend/dist
+
+    # 只发布到宿主机回环地址：公网无法直连 8300，流量必须经过 OpenResty。
+    # 1Panel 的 OpenResty 若为 host 网络，用 127.0.0.1:8300 就能代理；
+    # 若为 bridge 网络，则用容器名 http://webstack:8300（见部署手册第 5 节）。
+    ports:
+      - "127.0.0.1:8300:8300"
+
+    volumes:
+      - ./data:/app/data                 # SQLite 与备份，必须持久化
+      - ./app:/app/app:ro                # 后端代码：改完重启容器即生效
+      - ./frontend/dist:/app/frontend/dist:ro  # 前端产物：原地覆盖文件即生效（整目录替换后需重启重新挂载）
+
+    networks:
+      - 1panel-network
+
+    # 最小权限：容器内不需要任何 Linux capability
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+
+    stop_grace_period: 10s
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  # 1Panel 各应用互通的默认网络；不存在时先 docker network create 1panel-network
+  1panel-network:
+    external: true
